@@ -70,6 +70,19 @@ describe('items routes', () => {
         });
       });
   });
+
+  it('can delete an item by index', () => {
+    return request(app)
+      .delete('/api/v1/items/0')
+      .then(res => {
+        expect(res.body).toEqual({
+          name: 'Panda',
+          species: 'lion',
+          likes: 'peaches',
+          dislikes: 'computers'
+        });
+      });
+  });
 });
 
 
