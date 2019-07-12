@@ -6,7 +6,7 @@
   "directories": {
     "lib": "lib",
     "test": "test"
-  }  ,
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
