@@ -50,6 +50,26 @@ describe('items routes', () => {
         });
       });
   });
+
+  it('can update an item with PUT', () => {
+    const newItem = {
+      name: 'Panda',
+      species: 'lion',
+      likes: 'peaches',
+      dislikes: 'computers'
+    };
+    return request(app)
+      .put('/api/v1/items/0')
+      .send(newItem)
+      .then(res => {
+        expect(res.body).toEqual({
+          name: 'Panda',
+          species: 'lion',
+          likes: 'peaches',
+          dislikes: 'computers'
+        });
+      });
+  });
 });
 
 
