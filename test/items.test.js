@@ -16,12 +16,12 @@ describe('items routes', () => {
         })
       .then(res => {
         console.log(res.body);
-        expect(res.body).toEqual([{
+        expect(res.body).toEqual({
           name: 'Meowsy',
           species : 'cat',
           likes: 'tuna',
           dislikes: 'ham'
-        }]);
+        });
       });
   });
 
